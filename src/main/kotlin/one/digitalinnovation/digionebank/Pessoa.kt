@@ -9,11 +9,13 @@ class Pessoa {
    // inner class Endereco{
    //     var rua : String = "Ruma Minha Rua 666"
    // }
+
+    constructor()//construtor secundario
+
+    fun infoPessoa() = "$nome e $cpf"
 }
 
 fun main(){
     val p1 = Pessoa()
-    println(p1.nome)
-    println(p1.cpf)
-
+    println(p1.infoPessoa())
 }
