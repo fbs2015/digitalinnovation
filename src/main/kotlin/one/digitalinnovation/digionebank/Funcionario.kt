@@ -7,5 +7,11 @@ abstract class Funcionario (
    cpf : String,
    val salario : BigDecimal
 ): Pessoa(nome, cpf) {
-    abstract fun calculoAuxilio():
+    protected abstract fun calculoAuxilio() : BigDecimal
+    override fun toString(): String = """
+        Nome: $nome
+        CPF: $cpf
+        Salario: $salario
+        Auxilio: ${calculoAuxilio()}
+     """.trimIndent()
 }
